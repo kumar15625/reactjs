@@ -6,7 +6,7 @@ export default function TextFrom(props) {
         let newText=text.toUpperCase();
         setText(newText)
     }
-    const onhashchange= (event)=>{
+    const handleOnChnage= (event)=>{
         console.log("On change");
         setText(event.target.value)
     }
@@ -17,7 +17,7 @@ export default function TextFrom(props) {
           <h1> {props.heading}</h1>
             <div className="mb-3">
                
-                <textarea className="form-control" value ={text} onChange={onhashchange} id="myBox" rows="12"></textarea>
+                <textarea className="form-control" value ={text} onChange={handleOnChnage} id="myBox" rows="12"></textarea>
             </div>
              <button className="btn btn-primary" onClick={handleUpClick}>Convert To Upper case</button>
         </div>
